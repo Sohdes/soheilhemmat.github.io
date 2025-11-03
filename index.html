@@ -1,0 +1,419 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width,initial-scale=1" />
+  <title>Soheil Hemmat — Research & Projects</title>
+  <meta name="description" content="Personal academic website for Soheil Hemmat. Research interests, projects, CV and contact." />
+  <style>
+    /* --- Simple modern styling (single-file, easy to edit) --- */
+    :root{
+      --bg:#fcfcfd; --card:#ffffff; --muted:#666; --accent:#2154ff; --glass:rgba(33,84,255,0.06);
+      --max-width:1100px; --radius:14px; --pad:20px;
+      --mono: ui-monospace, SFMono-Regular, Menlo, Monaco, "Roboto Mono", monospace;
+    }
+    *{box-sizing:border-box}
+    body{font-family:Inter, system-ui, -apple-system, "Segoe UI", Roboto, "Helvetica Neue", Arial; margin:0; background:var(--bg); color:#0b1220; line-height:1.5}
+    .wrap{max-width:var(--max-width); margin:36px auto; padding:0 20px}
+    header{display:flex; gap:20px; align-items:center}
+    .avatar{width:96px; height:96px; border-radius:12px; object-fit:cover; background:linear-gradient(135deg,var(--glass),transparent); border:1px solid rgba(11,18,32,0.06)}
+    h1{font-size:clamp(20px,3.6vw,30px); margin:0}
+    h2{margin:0 0 12px 0}
+    p.lead{color:var(--muted); margin:8px 0 0}
+
+    /* layout */
+.hero {
+  display: flex;
+  align-items: center;
+  justify-content: flex-start;
+  gap: 28px;
+  margin: 30px 0 50px;
+}
+
+.hero-left img {
+  width: 140px;
+  height: 140px;
+  border-radius: 50%;
+  object-fit: cover;
+  border: 3px solid rgba(33,84,255,0.15);
+  box-shadow: 0 4px 12px rgba(0,0,0,0.1);
+}
+
+.hero-right {
+  flex: 1;
+}
+
+@media (max-width: 768px) {
+  .hero {
+    flex-direction: column;
+    text-align: center;
+  }
+  .hero-right nav {
+    justify-content: center;
+  }
+}
+
+
+    /* nav */
+    nav{display:flex; gap:10px; margin-top:12px}
+    .btn{display:inline-block; padding:10px 14px; border-radius:10px; text-decoration:none; font-weight:600}
+    .btn-primary{background:var(--accent); color:white}
+    .btn-ghost{background:transparent; color:var(--accent); border:1px solid rgba(33,84,255,0.12)}
+
+    /* sections */
+    section.card{background:var(--card); padding:var(--pad); border-radius:var(--radius); box-shadow:0 6px 20px rgba(16,24,40,0.04); margin-bottom:18px}
+    .two-col{display:grid; grid-template-columns:2fr 1fr; gap:20px}
+    @media (max-width:880px){ .two-col{grid-template-columns:1fr} .hero{flex-direction:column; align-items:flex-start} .hero-right{width:100%} }
+
+    /* projects */
+    .projects-grid{display:grid; grid-template-columns:repeat(auto-fit,minmax(260px,1fr)); gap:16px}
+.project {
+  padding: 18px;
+  border-radius: 12px;
+  background: linear-gradient(180deg, rgba(33,84,255,0.02), transparent);
+  border: 1px solid rgba(11,18,32,0.06);
+  margin-bottom: 18px;   /* 🟢 This adds the breathing space between projects */
+}
+    .project h3{margin:0 0 8px}
+    .meta{font-size:13px; color:var(--muted); margin-bottom:8px}
+    .small{font-size:14px; color:var(--muted)}
+    .tags{display:flex; gap:8px; flex-wrap:wrap}
+    .tag{padding:6px 8px; border-radius:999px; background:rgba(0,0,0,0.04); font-size:12px}
+
+    /* project details (hidden by default) */
+    .proj-detail{display:none; margin-top:10px; border-top:1px dashed rgba(11,18,32,0.04); padding-top:10px}
+    .proj-detail pre{background:#0b1220; color:#f6f8ff; padding:10px; border-radius:8px; overflow:auto; font-family:var(--mono); font-size:13px}
+
+    /* footer/contact */
+    footer{padding:20px 0; text-align:center; color:var(--muted)}
+
+    /* utility */
+    .muted{color:var(--muted)}
+    .cv-link{display:inline-flex; align-items:center; gap:8px}
+    .contact-list{display:flex; gap:12px; flex-wrap:wrap}
+    a.inline{color:var(--accent); text-decoration:none}
+
+    /* small print for instructions */
+    .note{font-size:13px; color:var(--muted)}
+  @media(max-width: 768px){
+    .hero { flex-direction: column; align-items: center; text-align: center; }
+    .hero-left, .hero-right { flex: none; width: 100%; margin-top:0; height:auto; }
+    .hero-left img { height:250px; }
+  }
+  @media(max-width: 480px){
+    .hero-left img { height:180px; }
+  }
+  </style>
+</head>
+<body>
+  <div class="wrap">
+<div class="wrap">
+  <header class="hero" style="display:flex; align-items:flex-start; gap:24px; margin:30px 0; flex-wrap:wrap;">
+    
+    <!-- Left: Profile photo -->
+    <div class="hero-left" style="flex:0 0 50%; display:flex; justify-content:center; align-items:center; height:370px; min-width:200px;">
+      <img src="Pic.jpg" 
+           alt="Profile photo of Soheil Hemmat"
+           style="width:100%; height:100%; border-radius:12px; object-fit:cover; 
+                  box-shadow:0 6px 18px rgba(0,0,0,0.12);">
+    </div>
+
+    <!-- Right: Name, title, tagline, and buttons -->
+    <div class="hero-right" style="flex:1; display:flex; flex-direction:column; gap:12px; justify-content:flex-start; min-width:200px;">
+      
+      <!-- Name & Academic Title -->
+      <h1 style="margin:0;font-size:clamp(32px,4vw,40px); font-weight:800; line-height:1.2; letter-spacing:0.5px;">
+        Soheil Hemmat  
+        <span class="muted" style="color:#0b1220; font-weight:600; font-size:clamp(20px,2.5vw,24px);">
+          Undergraduate Student in Computer Science
+        </span>
+      </h1>
+      
+      <!-- Short Academic Tagline -->
+      <p class="lead" style="margin-top:8px; font-size:clamp(16px,2.2vw,18px); font-weight:500; color:#333; line-height:1.6;">
+        Final-year B.Sc. student at Shahed University, focusing on Machine Learning, Computer Vision, and Human–Computer Interaction. Passionate about building research projects that bridge theory and practical applications.
+      </p>
+
+      <!-- Call-to-Action Buttons -->
+      <nav style="display:flex; flex-wrap:wrap; gap:12px; margin-top:16px;">
+        <a href="#projects" 
+           style="padding:12px 22px; border-radius:10px; font-weight:600; background:#2154ff; color:white; text-decoration:none; box-shadow:0 3px 12px rgba(33,84,255,0.25); transition:0.3s;">
+          Projects
+        </a>
+        <a href="#contact" 
+           style="padding:12px 22px; border-radius:10px; font-weight:600; border:1px solid rgba(33,84,255,0.25); color:#2154ff; text-decoration:none; transition:0.3s;">
+          Contact
+        </a>
+        <a href="cv.pdf" download 
+           style="padding:12px 22px; border-radius:10px; font-weight:600; background:#f4f4f5; color:#2154ff; text-decoration:none; transition:0.3s;">
+          Download CV 
+        </a>
+      </nav>
+
+    </div>
+  </header>
+</div>
+
+
+
+   <main>
+  <!-- ABOUT + QUICK FACTS -->
+  <section class="card two-col" id="about">
+    <div>
+      <h2>About Me</h2>
+      <p style="font-size:16px; line-height:1.6;">
+          I am in the final semester of my undergraduate studies in <strong>Computer Science</strong> at <strong>Shahed University</strong>, holding a GPA of 18.2/20 and First Class Honours. My research interests focus on leveraging computational methods to enhance human capabilities and deepen understanding of complex systems. I also enjoy exploring the theoretical and mathematical aspects of computer science.
+
+      </p>
+
+      <h3 style="margin-top:18px">Research Interests</h3>
+      <ul style="font-size:16px; line-height:1.6;">
+        <li>Computer Vision</li>
+        <li>Human–Computer Interaction</li>
+        <li>Machine Learning </li>
+        <li>Natural Language Processing </li>
+        <li>Theoretical Computer Science & Computation</li>
+      </ul>
+    </div>
+
+    <aside>
+
+
+      <div>
+        <h3>Availability</h3>
+        <p style="font-size:16px; line-height:1.6;">
+          Open to MSc/PhD research supervision opportunities.
+        </p>
+      </div>
+    </aside>
+  </section>
+</main>
+
+
+
+
+
+
+
+
+
+
+<!-- Writings / Publications -->
+<section class="card" id="research">
+  <h2>Research</h2>
+  <ul style="margin-top:10px; font-size:16px; line-height:1.6;">
+    
+    <li>
+      <strong>(Ongoing) <em>Mostar index applied to some new graphs </strong> </em> — 
+      In this paper, we determined the Mostar index for several graph families and established equalities and bounds that illustrate how various graph operations affect these indices. 
+      <a href="Abstract_Role.pdf" target="_blank">PDF</a>
+    </li>
+
+    <li style="margin-top:12px;">
+      <strong>(Submitted) <em>Artificial Intelligence Regulatory Bodies in the European Union </strong> </em> — in Persian — 
+      In this paper, I analyzed the European Union’s approach to regulating artificial intelligence, focusing on key institutions, legal frameworks, and governance models for responsible AI development. 
+      <a href="AI_Regulatory.pdf" target="_blank">PDF</a>
+    </li>
+
+  </ul>
+</section>
+
+
+
+
+    <!-- PROJECTS -->
+<section class="card" id="projects">
+  <h2>Selected Projects</h2>
+
+  <div class="projects-grid" style="margin-top:12px">
+
+    <!-- --- Project 1 --- -->
+    <article class="project">
+      <h3>AI Capstone — Recommender Systems (ALS, SVD, LightGCN) using MovieLens-100K</h3>
+      <p>
+        <strong>Project Idea:</strong> Benchmark multiple recommender system models to evaluate performance and visualize results for interpretability.
+      </p>
+      <p>
+        <strong>My Role:</strong> Collaborated with one teammate. Responsible for visualizing the SVD algorithm and analyzing model efficiency. Implemented evaluation metrics in Python/PyTorch (RMSE, MAE, Precision@5, Recall@5).
+      </p>
+      <p>
+        <strong>Outcome:</strong> Produced reproducible code and clear visualizations, highlighting the relative strengths of ALS, SVD, and LightGCN on MovieLens-100K. Gained insights into algorithm performance and interpretability.
+      </p>
+      <div style="margin-top:8px">
+        <span class="tag">Report: <a href="Report-AI.pdf" target="_blank">PDF</a></span>
+        <span class="tag">Source: <a href="Source.pdf" target="_blank">PDF</a></span>
+      </div>
+    </article>
+
+<!-- --- Project 2 --- -->
+<article class="project">
+  <h3>Estimating Functions using Genetic Algorithms</h3>
+  <p>
+    <strong>Project Idea:</strong> Develop a tree-based genetic algorithm to approximate mathematical functions and test on regression tasks.
+  </p>
+  <p>
+    <strong>Outcome:</strong> Achieved accurate function approximation with interpretable results and reproducible code. Demonstrated the effectiveness of genetic algorithms for regression problems.
+  </p>
+  <div style="margin-top:8px">
+    <span class="tag">Code: <a href="https://github.com/Sohdes/Projects" target="_blank">GitHub</a></span>
+    <span class="tag">Data: <a href="https://drive.google.com/file/d/1xTaw2KjTpX3XfJe0ogqN852L71aCs9Vx/view" target="_blank">Google Drive</a></span>
+  </div>
+</article>
+
+<!-- --- Project 3 --- -->
+<article class="project">
+  <h3>Mini Compiler in C (Flex/Bison)</h3>
+  <p>
+    <strong>Project Idea:</strong> Build a minimal compiler capable of parsing expressions and handling identifiers, numbers, and loops.
+  </p>
+  <p>
+    <strong>Outcome:</strong> Successfully created a functioning mini-compiler, demonstrating understanding of parsing techniques, compiler design, and operator precedence rules.
+  </p>
+  <div style="margin-top:8px">
+    <span class="tag">Code: <a href="https://github.com/Sohdes/Projects" target="_blank">GitHub</a></span>
+  </div>
+</article>
+
+</div>
+
+
+
+<!-- WORKING EXPERIENCE & PATENTS -->
+<section class="card" id="experience">
+  <h2>Work Experience</h2>
+  
+  <ul style="margin-top:12px; line-height:1.5;">
+    <li>
+      <strong>Spring 2025 — Teaching Assistant, Operating Systems</strong> (Supervised by Dr. Purbahman)
+      <ul>
+        <li>Designed and evaluated exercises</li>
+        <li>Assisted students with problem-solving</li>
+      </ul>
+    </li>
+    
+    <li>
+      <strong>Spring 2025 — Teaching Assistant, Digital Design</strong> (Supervised by Dr. Farhadian)
+      <ul>
+        <li>Conducted tutorial sessions</li>
+        <li>Designed and evaluated exercises and circuits</li>
+        <li>Assisted students with problem-solving</li>
+      </ul>
+    </li>
+    
+    <li>
+      <strong>Spring 2025 — Substitute Lecturer, Compiler Course</strong> (Supervised by Dr. Seyed Javadi)
+      <ul>
+        <li>Delivered a one-time lecture on computational complexity and compiler design</li>
+        <li>Addressed student questions and clarified complex concepts</li>
+      </ul>
+    </li>
+    
+    <li>
+      <strong>Fall 2024 — Head Teaching Assistant, Basis of Theory of Computation</strong> (Supervised by Dr. Ali Abdi)
+      <ul>
+        <li>Managed the TA team</li>
+        <li>Conducted tutorial sessions</li>
+        <li>Assisted in grading midterm exams and problem-solving</li>
+      </ul>
+    </li>
+    
+    <li>
+      <strong>Spring 2024 — Teaching Assistant, Abstract Matrix and Linear Algebra</strong> (Supervised by Dr. Nasr)
+      <ul>
+        <li>Conducted tutorial sessions</li>
+        <li>Designed exercises</li>
+        <li>Assisted students with problem-solving</li>
+      </ul>
+    </li>
+    
+    <li>
+<strong>2023 Summer — Education Mentor, <a href="https://www.linkedin.com/company/hamrah-academy/?originalSubdomain=ir" target="_blank">Hamrah Aval Academy</a></strong>
+<ul>
+  <li>Mentored top-performing students in the "Keyboard" program by MCI Academy</li>
+  <li>Provided guidance and support to improve problem-solving and learning skills</li>
+  <li>Designed and supervised exercises in Python, including algorithmic and machine learning problems</li>
+</ul>
+
+    </li>
+  </ul>
+
+</section>
+
+<section class="card" id="patents">
+  <h2>Patents</h2>
+  <ul>
+    <li>
+      <strong>Precision Measurement Tool for Large O-Rings (>200 mm)</strong> — Conducted computational calibration for accurate measurement of large, flexible O-rings and developed an integrated mechanical tool. 
+      <br>
+      <span class="tag">Patent No.: 112589 (Iran)</span> 
+      <span class="tag"><a href="Patent_Translated.pdf" target="_blank">Offical Translated PDF</a></span>
+    </li>
+  </ul>
+</section>
+
+
+
+
+
+<section class="card" id="cv">
+  <h2>Curriculum Vitae</h2>
+  <p>
+    Download my full CV which includes academic achievements, research experience, selected projects, teaching assistant roles, and patents.
+  </p>
+  <a class="btn" href="cv.pdf" download
+     style="padding:12px 22px; border-radius:10px; background:#2154ff; color:white; font-weight:600;">
+    Download CV 
+  </a>
+</section>
+
+
+<section class="card" id="contact">
+  <h2>Contact</h2>
+  <p>This website was created to showcase my projects and CV for VIXI Lab. Feel free to reach out via email or LinkedIn.</p>
+  <div class="contact-list" style="margin-top:12px">
+    <a class="btn btn-primary" href="mailto:soheil.hemmat.83@gmail.com">Email</a>
+    <a class="btn" href="https://www.linkedin.com/in/soheil-hemat/" target="_blank">LinkedIn</a>
+  </div>
+</section>
+
+
+
+
+
+
+      </section>
+
+    </main>
+
+    <footer>
+    </footer>
+  </div>
+
+  <script>
+    // Small helper: toggle project details
+    function toggleDetail(btn){
+      const art = btn.closest('.project');
+      const detail = art.querySelector('.proj-detail');
+      const open = detail.style.display === 'block';
+      detail.style.display = open ? 'none' : 'block';
+      btn.setAttribute('aria-expanded', (!open).toString());
+      btn.textContent = open ? 'Read more' : 'Show less';
+    }
+
+    // Accessibility: allow opening details with keyboard
+    document.addEventListener('keydown', e => {
+      if(e.key === 'Enter' && document.activeElement && document.activeElement.matches('button')){
+        document.activeElement.click();
+      }
+    });
+  </script>
+
+  <!--
+    Instructions:
+    - Replace placeholder text (your name, photo, email, links).
+    - Replace the example projects with your real projects; keep the "Process" / "My role" / "Outcome" sections.
+    - Host: push this file and your CV.pdf to GitHub and enable GitHub Pages or use Netlify/Vercel.
+    - Professors appreciate: short emails linking to a specific project + a downloadable CV.
+  -->
+</body>
+</html>
