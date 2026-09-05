@@ -28,18 +28,25 @@
 .hero {
   display: flex;
   align-items: center;
-  justify-content: flex-start;
-  gap: 28px;
+  gap: 40px;
   margin: 30px 0 50px;
 }
 
+.hero-left {
+  flex-shrink: 0;
+}
+
 .hero-left img {
-  width: 140px;
-  height: 140px;
-  border-radius: 50%;
+  width: 280px;
+  height: auto;
+  aspect-ratio: 992 / 1277;
+
   object-fit: cover;
-  border: 3px solid rgba(33,84,255,0.15);
-  box-shadow: 0 4px 12px rgba(0,0,0,0.1);
+  object-position: center;
+
+  border-radius: 14px;
+  border: 3px solid rgba(33, 84, 255, 0.15);
+  box-shadow: 0 4px 14px rgba(0, 0, 0, 0.10);
 }
 
 .hero-right {
@@ -51,6 +58,11 @@
     flex-direction: column;
     text-align: center;
   }
+
+  .hero-left img {
+    width: min(280px, 80vw);
+  }
+
   .hero-right nav {
     justify-content: center;
   }
